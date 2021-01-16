@@ -4,12 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.pet-clinic-spring.com</groupId>
-    <artifactId>pet-clinic-spring</artifactId>
-    <version>2.4.1</version>
+	<artifactId>pet-clinic-spring</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.pet-clinic-spring.com</groupId>
   <artifactId>pet-clinic-data</artifactId>
-  <version>2.4.1</version>
   <name>pet-clinic-data</name>
   <url>http://maven.apache.org</url>
   <properties>
