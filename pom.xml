@@ -9,7 +9,7 @@
 	
 	<groupId>com.pet-clinic-spring.com</groupId>
 	<artifactId>pet-clinic-spring</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>pet-clinic-spring</name>
 	<description>Pet Clinic Project</description>
@@ -44,7 +44,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	<scm><developerConnection>scm:git:https://github.com/kishorbundhe/pet-clinic-spring.git</developerConnection>  <tag>pet-clinic-spring-0.0.1</tag>
+	<scm><developerConnection>scm:git:https://github.com/kishorbundhe/pet-clinic-spring.git</developerConnection>  <tag>HEAD</tag>
   </scm>
 <modules>
 <module>pet-clinic-data</module>
