@@ -1,12 +1,15 @@
 package com.petclinicspring.com.services.map;
 
+import com.petclinicspring.com.models.Owner;
+import com.petclinicspring.com.services.OwnerService;
+import org.springframework.stereotype.Service;
+
 import java.util.Set;
 
-import com.petclinicspring.com.models.Owner;
-import com.petclinicspring.com.services.CrudService;
-
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long>
-    implements CrudService<Owner, Long> {
+
+        implements OwnerService {
 
   @Override
   public Set<Owner> findAll() {
@@ -35,5 +38,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long>
 
     super.deleteById(id);
   }
-  
+
+  @Override
+  public Owner findByLastName(String lastName) {// TODO Auto-generated method stub
+    return null;
+  }
+
 }

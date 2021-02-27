@@ -45,7 +45,8 @@
 			</plugin>
 		</plugins>
 	</build>
-	<scm><developerConnection>scm:git:https://github.com/kishorbundhe/pet-clinic-spring.git</developerConnection>  <tag>HEAD</tag>
+	<scm><developerConnection>scm:git:https://github.com/kishorbundhe/pet-clinic-spring.git</developerConnection>
+		<tag>HEAD</tag>
   </scm>
 <modules>
 <module>pet-clinic-data</module>
