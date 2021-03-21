@@ -8,34 +8,34 @@ import java.util.Set;
 
 @Service
 public class PetServiceMap extends AbstractMapService<Pet, Long>
-    implements PetService {
+        implements PetService {
 
-  @Override
-  public Set<Pet> findAll() {
-    return super.findAll();
-  }
+    @Override
+    public Set<Pet> findAll() {
+        return super.findAll();
+    }
 
-  @Override
-  public Pet findById(Long id) {
+    @Override
+    public Pet findById(Long id) {
 
-    return this.findById(id);
-  }
+        return this.findById(id);
+    }
 
-  @Override
-  public Pet save(Pet object) {
+    @Override
+    public Pet save(Pet object) {
 
-    return super.save(object.getId(), object);
-  }
+        return super.save(object);
+    }
 
-  @Override
-  public void delete(Pet object) {
-    super.delete(object);
-  }
+    @Override
+    public void delete(Pet object) {
+        super.delete(object);
+    }
 
-  @Override
-  public void deleteById(Long id) {
+    @Override
+    public void deleteById(Long id) {
 
-    super.deleteById(id);
-  }
-  
+        super.deleteById(id);
+    }
+
 }

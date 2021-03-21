@@ -8,34 +8,34 @@ import java.util.Set;
 
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long>
-    implements VetService {
+        implements VetService {
 
-  @Override
-  public Set<Vet> findAll() {
-    return super.findAll();
-  }
+    @Override
+    public Set<Vet> findAll() {
+        return super.findAll();
+    }
 
-  @Override
-  public Vet findById(Long id) {
+    @Override
+    public Vet findById(Long id) {
 
-    return this.findById(id);
-  }
+        return this.findById(id);
+    }
 
-  @Override
-  public Vet save(Vet object) {
+    @Override
+    public Vet save(Vet object) {
 
-    return super.save(object.getId(), object);
-  }
+        return super.save(object);
+    }
 
-  @Override
-  public void delete(Vet object) {
-    super.delete(object);
-  }
+    @Override
+    public void delete(Vet object) {
+        super.delete(object);
+    }
 
-  @Override
-  public void deleteById(Long id) {
+    @Override
+    public void deleteById(Long id) {
 
-    super.deleteById(id);
-  }
-  
+        super.deleteById(id);
+    }
+
 }
