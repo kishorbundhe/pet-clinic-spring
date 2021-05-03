@@ -7,14 +7,15 @@ import com.petclinicspring.com.services.PetService;
 import com.petclinicspring.com.services.PetTypeService;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
 import java.util.Set;
 
 @Service
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     private final PetTypeService petTypeService;
     private final PetService petService;
 
-    public OwnerServiceMap(PetTypeService petTypeService, PetService petService) {
+    public OwnerMapService(PetTypeService petTypeService, PetService petService) {
         this.petTypeService = petTypeService;
         this.petService = petService;
     }
@@ -41,8 +42,8 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
                     } else {
                         throw new RuntimeException("Pet Type is Required");
                     }
-                    if(pet.getId()==null){
-                        Pet savedPet=petService.save(pet);
+                    if (pet.getId() == null) {
+                        Pet savedPet = petService.save(pet);
                         pet.setId(savedPet.getId());
                     }
                 });
@@ -67,7 +68,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner findByLastName(String lastName) {// TODO Auto-generated method stub
-        return null;
+        return map.entrySet().stream().
+                filter(owner -> owner.equals(lastName)).
+                findFirst().
+                map(Map.Entry::getValue).
+                orElse(null);
     }
 
 }
