@@ -80,12 +80,12 @@ public class DataLoader implements CommandLineRunner {
         visitService.save(visit);
 
         Owner owner2 = new Owner();
+
         owner2.setFirstName("Fist");
         owner2.setLastName("Giennama");
         owner2.setAddress("123 Brickeles");
         owner2.setCity("Miami");
         owner2.setTelephone("32456567");
-
         Pet pet2 = new Pet();
         pet2.setName("ROSCO");
         pet2.setPetType(SavedCatPetType);
