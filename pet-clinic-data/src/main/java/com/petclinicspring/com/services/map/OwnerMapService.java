@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Set;
 
 @Service
-@Profile({"default","map"})
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     private final PetTypeService petTypeService;
     private final PetService petService;
@@ -31,7 +31,7 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     @Override
     public Owner findById(Long id) {
 
-        return this.findById(id);
+        return super.findById(id);
     }
 
     @Override
@@ -71,7 +71,7 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     @Override
     public Owner findByLastName(String lastName) {// TODO Auto-generated method stub
         return map.entrySet().stream().
-                filter(owner -> owner.equals(lastName)).
+                filter(owner -> owner.getValue().getLastName().equals(lastName)).
                 findFirst().
                 map(Map.Entry::getValue).
                 orElse(null);
